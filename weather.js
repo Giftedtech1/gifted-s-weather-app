@@ -1,6 +1,6 @@
 class WeatherDashboard {
   constructor() {
-    this.apiKey = "d2b25814b5b82cf3f869382817c17367"; //  OpenWeather API key
+    this.apiKey = "d2b25814b5b82cf3f869382817c17367"; // chill lol   i left the API key cus its free im not paying for it and no damages can be caused 
     this.animations = new WeatherAnimations();
     this.chart = null;
     this.init();
@@ -88,7 +88,7 @@ class WeatherDashboard {
   }
 
   updateUI(data) {
-    // Update current weather
+    //  to Update current weather
     document.querySelector(".city").textContent = `${data.name}, Nigeria`;
     document.querySelector(".temp").textContent = `${Math.round(
       data.main.temp
@@ -108,13 +108,13 @@ class WeatherDashboard {
     )}°C`;
     details[3].textContent = `Pressure: ${data.main.pressure} hPa`;
 
-    // Update animations
+    //  to Update animations
     this.animations.setWeatherAnimation(data.weather[0].id);
 
-    // Update forecast
+    //  to Update forecast
     this.updateForecast(data.name);
 
-    // Update chart
+    // to Update chart
     this.updateWeatherChart(data.name);
   }
 
@@ -198,7 +198,7 @@ class WeatherDashboard {
   }
 
   showError(message) {
-    // Implement error notification
+    // to Implement error notification lol
     alert(message);
   }
 
@@ -285,7 +285,7 @@ class WeatherAnimations {
   }
 }
 
-// Initialize the dashboard when the DOM is loaded
+// to Initialize the dashboard when the DOM is loaded  
 document.addEventListener("DOMContentLoaded", () => {
   new WeatherDashboard();
 });
